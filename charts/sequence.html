@@ -1,0 +1,79 @@
+<!DOCTYPE HTML>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<title>タイトル</title>
+	<meta name="viewport" content="width=device-width">
+
+	<meta property="og:title" content="xxx" />
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="xxx">
+	<meta property="og:image" content="xxx">
+	<meta property="og:site_name" content="xxx">
+	<meta property="og:description" content="xxx">
+	<meta property="fb:app_id" content="xxx" />
+
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:site" content="@xxx">
+	<meta name="twitter:title" content="xxx">
+	<meta name="twitter:description" content="xxx">
+	<meta name="twitter:image" content="xxx">
+
+	<link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
+
+	<link type="text/css" rel="stylesheet" href="/css/lib.css"/>
+	<link type="text/css" rel="stylesheet" href="/css/main.css"/>
+</head>
+<body>
+
+<div class="mermaid">
+sequenceDiagram
+
+	participant 対戦相手
+    participant 状況分析
+    participant 詰の検証
+    participant 受けの検討
+    participant 局面判定
+    participant 相手浮駒の検索
+    participant 相手浮駒の検索
+    participant 攻防手の検索
+    participant 攻め手の検索
+    participant 守り手の検索
+    participant プラスの手検索
+
+
+
+    対戦相手->>状況分析: 指す
+    note over 状況分析: 詰みが
+    alt 無さそう
+        状況分析->>局面判定: 
+    else 相手、自玉にありそう
+        状況分析->>詰の検証: 
+    end
+    alt 相手玉に有り
+        詰の検証->>対戦相手: 指す
+    else 自玉に有り
+        詰の検証->>受けの検討: 
+    end
+    note over 受けの検討: 受けが
+    alt 無い
+        受けの検討->>対戦相手: 負けました。
+    else ある
+        受けの検討->>対戦相手: 指す
+    end
+ 
+
+
+
+	
+
+
+</div>
+
+<script src="./js/mermaid.min.js"></script>
+  <script>
+    mermaid.initialize({startOnLoad: true, theme: 'forest'});
+</script>
+
+</body>
+</html>

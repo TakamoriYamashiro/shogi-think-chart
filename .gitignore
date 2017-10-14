@@ -1,0 +1,70 @@
+#---------------- About files
+*.log
+*.sql
+*.sqlite
+
+
+#---------------- OS generated files
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+
+
+#---------------- npm specific files
+# package.json
+# gulpfile.js
+node_modules/
+
+
+#---------------- bower specific files
+# bower.json
+bower_components/
+
+
+#----------------　Apache specific files
+.htaccess
+.htpasswd
+
+
+#---------------- Wordpress specific files
+**/wp-config.php
+**/wp-content/uploads
+**/wp-content/themes/twenty*
+**/wp-content/backup-db
+**/wp-content/backups
+**/wp-content/cache
+**/wp-content/upgrade
+**/wp-content/uploads
+**/wp-content/wp-cache-config.php
+**/wp-content/plugins/hello.php
+
+
+#---------------- CakePHP specific files
+/config/app.php
+/config/.env
+/tmp/*
+/logs/*
+/tmp/*
+/vendor/*
+
+
+#---------------- Tool specific files
+*~ # vim
+*.swp # vim
+*.swo # vim
+*.sublime-* # sublime text
+*.komodoproject
+*.tmlanguage.cache # sublime text & textmate
+*.tmPreferences.cache # sublime text & textmate
+*.stTheme.cache # cache files for sublime text
+.settings/* # Eclipse
+.idea/
+.idea/* # JetBrains, aka PHPStorm, IntelliJ IDEA
+nbproject/* # NetBeans
+.vscode # Visual Studio Code
+.sass-cache/ # Sass preprocessor
